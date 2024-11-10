@@ -1,0 +1,65 @@
+.chatList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .title {
+    font-size: 10px;
+    font-weight: 600;
+  }
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    opacity: 0.1;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 5px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    max-height: 350px; /* Limit height, scrolls only when overflowing */
+    overflow-y: auto; /* Scrollbar appears only if content exceeds max height */
+    scrollbar-width: thin; /* For Firefox: make scrollbar thin */
+    scrollbar-color: #888 transparent; /* Transparent track for Firefox */
+  }
+
+  /* For WebKit-based browsers like Chrome, Edge, Safari */
+  
+  a {
+    padding: 10px;
+    border-radius: 20px;
+    &:hover {
+      background-color: #333;
+    }
+  }
+  .upgrade {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 14px;
+        &:first-child {
+          font-weight: 600;
+        }
+        &:last-child {
+          color: #888;
+        }
+      }
+    }
+  }
+}
